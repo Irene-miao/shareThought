@@ -14,14 +14,14 @@ export class AppComponent implements OnInit {
   canShare = false
 
   form!: FormGroup
-  fb: FormBuilder = inject(FormBuilder)
+  //fb: FormBuilder = inject(FormBuilder)
 
 
 ngOnInit(): void {
-    this.form = this.fb.group({
+    /*this.form = this.fb.group({
       name: this.fb.control('', [Validators.required]),
       email: this.fb.control('', [Validators.required]),
-    })
+    })*/
 
     this.canShare = !!navigator.share
 }
@@ -38,4 +38,5 @@ share(text: string) {
     this.thoughtCompo.clearForm() })
     .catch(err => alert('JSON: ' + JSON.stringify(err)))
 }
+
 }

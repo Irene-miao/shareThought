@@ -1,4 +1,4 @@
-<form [formGroup]="thoughtForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="thoughtForm" (submit)="share()">
    
   <div class="grid-container">
       <mat-form-field appearance="outline">
@@ -9,11 +9,11 @@
       </mat-hint>
       </mat-form-field>
       <div>
-        <button mat-stroked-button (click)="clearForm()">
+        <button type="button" mat-stroked-button (click)="clearForm()">
           Clear
         </button>
         <button type="submit" mat-stroked-button [disabled]="invalid()">
-        <mat-icon>share</mat-icon>>
+        Share
         </button>
       </div>
   </div>
